@@ -1,0 +1,1356 @@
+import type { GenericExercise } from '../types/exercise';
+
+export const seedReadingExercises: GenericExercise[] = [
+  // =========================================================================
+  // A2 LEVEL ACTIVITIES (7 activities, Difficulty 1 - 3)
+  // =========================================================================
+  {
+    id: 'read_a2_01_library',
+    skill: 'Reading',
+    cefrLevel: 'A2',
+    difficulty: 1,
+    taskType: 'short_message',
+    title: 'Library Opening Hours Notice',
+    instructions: 'Read the notice from the city library and answer the question.',
+    content: {
+      context: 'Notice pinned on the public library front entrance:',
+      text: 'CENTRAL CITY LIBRARY\n\nStarting from Monday 3rd October, the library will open at 9:30 AM instead of 9:00 AM on weekdays. Weekend hours remain 10:00 AM to 4:00 PM. Please return all borrowed books to the automatic drop-box by the main doors when the building is closed.',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'What change does this notice announce?',
+        mode: 'single_choice',
+        options: [
+          'The library will open 30 minutes later from Monday to Friday.',
+          'The library is closing permanently on weekends.',
+          'Visitors can no longer return books when the library is closed.',
+          'The library will open earlier on Saturday and Sunday.',
+        ],
+        correctAnswer: 'The library will open 30 minutes later from Monday to Friday.',
+        distractors: [
+          'The library is closing permanently on weekends.',
+          'Visitors can no longer return books when the library is closed.',
+          'The library will open earlier on Saturday and Sunday.',
+        ],
+        hints: [
+          'Look at the times mentioned for weekdays: "9:30 AM instead of 9:00 AM".',
+          '9:30 AM is half an hour later than 9:00 AM.',
+        ],
+        explanation:
+          'The notice explicitly states that the library will open at 9:30 AM instead of 9:00 AM on weekdays, which is 30 minutes later.',
+        conceptTags: ['detail', 'short_message'],
+      },
+    ],
+    conceptTags: ['detail', 'public_notice'],
+    estimatedDurationSec: 60,
+  },
+  {
+    id: 'read_a2_02_sports',
+    skill: 'Reading',
+    cefrLevel: 'A2',
+    difficulty: 2,
+    taskType: 'short_message',
+    title: 'Sports Centre Locker Policy',
+    instructions: 'Read the sign in the sports centre changing rooms.',
+    content: {
+      context: 'Sign displayed above the lockers in Riverside Gym:',
+      text: 'LOCKER USE RULES\n\nLockers are for daily use only while you are exercising. Padlocks left on lockers overnight will be cut and contents removed by staff every evening at 10:00 PM. The gym is not responsible for lost or stolen valuables.',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'Gym members should:',
+        mode: 'single_choice',
+        options: [
+          'Empty their lockers before leaving the building each day.',
+          'Buy a special padlock from the gym reception desk.',
+          'Leave their belongings in the lockers overnight for safety.',
+          'Ask staff to look after valuable items during the night.',
+        ],
+        correctAnswer: 'Empty their lockers before leaving the building each day.',
+        distractors: [
+          'Leave their belongings in the lockers overnight for safety.',
+          'Buy a special padlock from the gym reception desk.',
+          'Ask staff to look after valuable items during the night.',
+        ],
+        hints: [
+          'Notice what happens if padlocks are left on lockers overnight: staff cut them and remove items.',
+          'This means members cannot store items overnight.',
+        ],
+        explanation:
+          'Because staff cut locks and remove contents every night at 10:00 PM, users must clear their lockers before leaving each day.',
+        conceptTags: ['inference', 'short_message'],
+      },
+    ],
+    conceptTags: ['short_message', 'rules'],
+    estimatedDurationSec: 60,
+  },
+  {
+    id: 'read_a2_03_camping',
+    skill: 'Reading',
+    cefrLevel: 'A2',
+    difficulty: 2,
+    taskType: 'short_message',
+    title: 'Email: Weekend Camping Trip',
+    instructions: 'Read the email from Liam to his friend Ben.',
+    content: {
+      context: 'Email received on Wednesday morning:',
+      text: 'Hi Ben,\n\nI checked the weather forecast for our camping trip this weekend. Saturday morning looks sunny, but heavy rain is expected from Saturday night through Sunday afternoon. Do you still want to camp, or should we book a small wooden cabin at the campsite instead? Let me know by Thursday evening so I can reserve it.\n\nLiam',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'Why is Liam emailing Ben?',
+        mode: 'single_choice',
+        options: [
+          'To suggest an indoor alternative because of bad weather.',
+          'To cancel their weekend trip completely.',
+          'To ask Ben to check the local weather forecast.',
+          'To invite other friends to join their camping trip.',
+        ],
+        correctAnswer: 'To suggest an indoor alternative because of bad weather.',
+        distractors: [
+          'To cancel their weekend trip completely.',
+          'To ask Ben to check the local weather forecast.',
+          'To invite other friends to join their camping trip.',
+        ],
+        hints: [
+          'Liam mentions heavy rain on Saturday night and asks if they should book a cabin instead.',
+          'A wooden cabin is an indoor alternative to sleeping in a tent.',
+        ],
+        explanation:
+          'Liam mentions the rain and proposes booking a wooden cabin at the campsite rather than pitching a tent.',
+        conceptTags: ['main_idea', 'email'],
+      },
+    ],
+    conceptTags: ['email', 'main_idea', 'invitation'],
+    estimatedDurationSec: 75,
+  },
+  {
+    id: 'read_a2_04_fridge',
+    skill: 'Reading',
+    cefrLevel: 'A2',
+    difficulty: 2,
+    taskType: 'short_message',
+    title: 'Kitchen Note: Office Fridge',
+    instructions: 'Read the note on the staff kitchen refrigerator.',
+    content: {
+      context: 'Note pinned to the breakroom refrigerator:',
+      text: 'ATTENTION ALL STAFF\n\nPlease write your name and the date on all food containers placed in this fridge. Unlabelled items or expired food will be thrown away every Friday afternoon at 4:30 PM. Thank you for keeping our kitchen clean!',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'Food will be thrown away on Friday afternoon if:',
+        mode: 'single_choice',
+        options: [
+          'It has no label showing who owns it or when it was stored.',
+          'It was brought from home rather than bought at the cafeteria.',
+          'It is kept in plastic containers instead of paper bags.',
+          'Staff members do not eat lunch before 4:30 PM.',
+        ],
+        correctAnswer: 'It has no label showing who owns it or when it was stored.',
+        distractors: [
+          'It was brought from home rather than bought at the cafeteria.',
+          'It is kept in plastic containers instead of paper bags.',
+          'Staff members do not eat lunch before 4:30 PM.',
+        ],
+        hints: [
+          'The note says: "Unlabelled items or expired food will be thrown away".',
+          'Unlabelled means without a name or date.',
+        ],
+        explanation:
+          'The sign warns that unlabelled items (those without a name and date) will be thrown away at 4:30 PM on Fridays.',
+        conceptTags: ['detail', 'short_message'],
+      },
+    ],
+    conceptTags: ['short_message', 'workplace'],
+    estimatedDurationSec: 60,
+  },
+  {
+    id: 'read_a2_05_london_cloze',
+    skill: 'Reading',
+    cefrLevel: 'A2',
+    difficulty: 3,
+    taskType: 'multiple_choice_cloze',
+    title: 'Daily Life in London',
+    instructions: 'Read the short paragraph and choose the best word for each gap.',
+    content: {
+      text: 'Lucas lives in North London with two flatmates. Every weekday morning, he walks to the underground station and (1) [takes/carries/brings/rides] the train to central London. He works in a busy bookshop near Covent Garden. During his lunch break, Lucas usually (2) [buys/eats/spends/meets] a sandwich at a nearby park when the sun is shining. On Friday evenings, he often (3) [meets/knows/invites/talks] his friends for dinner at an Italian restaurant.',
+    },
+    questions: [
+      {
+        id: 'gap1',
+        prompt: 'Gap (1): Lucas walks to the underground station and _____ the train.',
+        mode: 'single_choice',
+        options: ['takes', 'carries', 'brings', 'rides'],
+        correctAnswer: 'takes',
+        distractors: ['carries', 'brings', 'rides'],
+        hints: ['Which verb is used with public transport like trains, buses, and planes?'],
+        explanation: 'In English, we "take" a train, bus, taxi, or plane.',
+        conceptTags: ['collocation', 'vocabulary'],
+      },
+      {
+        id: 'gap2',
+        prompt: 'Gap (2): Lucas usually _____ a sandwich at a nearby park when the sun is shining.',
+        mode: 'single_choice',
+        options: ['eats', 'buys', 'spends', 'cooks'],
+        correctAnswer: 'eats',
+        distractors: ['spends', 'buys', 'cooks'],
+        hints: ['What do you do with food at a park during your lunch break?'],
+        explanation: '"Eats a sandwich at a park" is the natural action during a lunch break.',
+        conceptTags: ['vocabulary', 'context'],
+      },
+      {
+        id: 'gap3',
+        prompt: 'Gap (3): On Friday evenings, he often _____ his friends for dinner.',
+        mode: 'single_choice',
+        options: ['meets', 'knows', 'invites', 'talks'],
+        correctAnswer: 'meets',
+        distractors: ['knows', 'invites', 'talks'],
+        hints: ['To get together with friends socially.'],
+        explanation: '"Meets his friends for dinner" means to get together with them.',
+        conceptTags: ['collocation', 'vocabulary'],
+      },
+    ],
+    conceptTags: ['cloze', 'collocations', 'daily_routine'],
+    estimatedDurationSec: 120,
+  },
+  {
+    id: 'read_a2_06_museum_open_cloze',
+    skill: 'Reading',
+    cefrLevel: 'A2',
+    difficulty: 3,
+    taskType: 'open_cloze',
+    title: 'A Visit to the Science Museum',
+    instructions: 'Read the short text and type the missing word in each gap. Write ONE word only.',
+    content: {
+      text: 'Last Saturday, Maya went to the Science Museum with (1) _____ younger brother. The museum is located in South Kensington, and admission is free (2) _____ all visitors. Maya’s brother was very excited (3) _____ the space exhibition because he wants to be an astronaut one day.',
+    },
+    questions: [
+      {
+        id: 'gap1',
+        prompt: 'Gap (1): Maya went to the Science Museum with _____ younger brother.',
+        mode: 'text_input',
+        correctAnswer: 'her',
+        acceptableAnswers: ['her'],
+        hints: ['Maya is female, so which possessive adjective corresponds to "she"?'],
+        explanation: 'We use the possessive adjective "her" because the subject is Maya.',
+        conceptTags: ['reference_pronoun', 'grammar'],
+      },
+      {
+        id: 'gap2',
+        prompt: 'Gap (2): ...admission is free _____ all visitors.',
+        mode: 'text_input',
+        correctAnswer: 'for',
+        acceptableAnswers: ['for', 'to'],
+        hints: ['Which preposition indicates who receives a free service?'],
+        explanation: 'The common preposition is "free for all visitors" (or "free to").',
+        conceptTags: ['connector_logical_relation', 'preposition'],
+      },
+      {
+        id: 'gap3',
+        prompt: 'Gap (3): Maya’s brother was very excited _____ the space exhibition.',
+        mode: 'text_input',
+        correctAnswer: 'about',
+        acceptableAnswers: ['about'],
+        hints: ['Which preposition follows the adjective "excited" when talking about an event?'],
+        explanation: 'The adjective "excited" takes the preposition "about": excited about something.',
+        conceptTags: ['collocation', 'preposition'],
+      },
+    ],
+    conceptTags: ['open_cloze', 'prepositions', 'pronouns'],
+    estimatedDurationSec: 120,
+  },
+  {
+    id: 'read_a2_07_weekend_matching',
+    skill: 'Reading',
+    cefrLevel: 'A2',
+    difficulty: 3,
+    taskType: 'matching',
+    title: 'Weekend Club Activities',
+    instructions: 'Match each person to the weekend club activity that best suits their interests.',
+    content: {
+      texts: [
+        {
+          id: 'act_A',
+          title: 'Activity A: Clay & Pottery Workshop',
+          body: 'Saturday 10:00 AM - 1:00 PM. Learn to make your own bowls and mugs using clay and water. All materials provided. No previous experience needed.',
+        },
+        {
+          id: 'act_B',
+          title: 'Activity B: Urban Cycling Tour',
+          body: 'Sunday 9:00 AM - 12:00 PM. Bring your own bicycle and helmet for a 20-kilometre group ride along the river paths. Suitable for active people.',
+        },
+        {
+          id: 'act_C',
+          title: 'Activity C: Acoustic Guitar Circle',
+          body: 'Saturday 3:00 PM - 5:00 PM. Bring your acoustic guitar to learn classic folk songs with fellow musicians in a relaxed community hall.',
+        },
+      ],
+    },
+    questions: [
+      {
+        id: 'match1',
+        prompt: 'Emma wants an indoor activity where she can create physical objects with her hands to take home.',
+        mode: 'single_choice',
+        options: ['Activity A', 'Activity B', 'Activity C'],
+        correctAnswer: 'Activity A',
+        distractors: ['Activity B', 'Activity C'],
+        hints: ['Emma wants to make physical objects with her hands.'],
+        explanation:
+          'Activity A (Pottery Workshop) is an indoor activity where participants create bowls and mugs with their hands.',
+        conceptTags: ['matching', 'detail'],
+      },
+      {
+        id: 'match2',
+        prompt: 'Daniel enjoys being outdoors, doing physical exercise, and riding his bike.',
+        mode: 'single_choice',
+        options: ['Activity A', 'Activity B', 'Activity C'],
+        correctAnswer: 'Activity B',
+        distractors: ['Activity A', 'Activity C'],
+        hints: ['Daniel likes outdoor exercise and has a bicycle.'],
+        explanation:
+          'Activity B (Urban Cycling Tour) involves outdoor exercise on a bicycle along river paths.',
+        conceptTags: ['matching', 'detail'],
+      },
+      {
+        id: 'match3',
+        prompt: 'Sophie loves music and wants to practice playing songs with other instrument players.',
+        mode: 'single_choice',
+        options: ['Activity A', 'Activity B', 'Activity C'],
+        correctAnswer: 'Activity C',
+        distractors: ['Activity A', 'Activity B'],
+        hints: ['Sophie is interested in playing a musical instrument.'],
+        explanation:
+          'Activity C (Acoustic Guitar Circle) is for people wanting to play music together.',
+        conceptTags: ['matching', 'detail'],
+      },
+    ],
+    conceptTags: ['matching', 'scanning'],
+    estimatedDurationSec: 150,
+  },
+
+  // =========================================================================
+  // B1 LEVEL ACTIVITIES (9 activities, Difficulty 4 - 6)
+  // =========================================================================
+  {
+    id: 'read_b1_01_commuter_train',
+    skill: 'Reading',
+    cefrLevel: 'B1',
+    difficulty: 4,
+    taskType: 'short_message',
+    title: 'Commuter Train Service Disruption',
+    instructions: 'Read the announcement sent to railway passengers via SMS.',
+    content: {
+      context: 'Customer alert from Southern Rail:',
+      text: 'SERVICE UPDATE: Due to emergency track repairs near Oakwood Station, all express services between Westbridge and King’s Cross will terminate at Eastvale until 6:00 PM. Replacement bus services have been arranged between Eastvale and King’s Cross. Passengers may also use their valid rail tickets on the underground network at no additional charge.',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'Passengers traveling towards King’s Cross before 6:00 PM:',
+        mode: 'single_choice',
+        options: [
+          'Must switch to a replacement bus or use the underground from Eastvale.',
+          'Must purchase a separate ticket if they choose to use the underground.',
+          'Will experience no changes if they travel on express trains.',
+          'Must wait at Oakwood Station until the tracks are fully reopened.',
+        ],
+        correctAnswer: 'Must switch to a replacement bus or use the underground from Eastvale.',
+        distractors: [
+          'Must purchase a separate ticket if they choose to use the underground.',
+          'Will experience no changes if they travel on express trains.',
+          'Must wait at Oakwood Station until the tracks are fully reopened.',
+        ],
+        hints: [
+          'The express train terminates at Eastvale, and replacement buses run from there.',
+          'Rail tickets are valid on the underground at no extra charge.',
+        ],
+        explanation:
+          'Trains terminate at Eastvale, so travelers must either board replacement buses or take the underground to reach King’s Cross.',
+        conceptTags: ['detail', 'short_message'],
+      },
+    ],
+    conceptTags: ['travel', 'short_message', 'detail'],
+    estimatedDurationSec: 75,
+  },
+  {
+    id: 'read_b1_02_volunteer_park',
+    skill: 'Reading',
+    cefrLevel: 'B1',
+    difficulty: 4,
+    taskType: 'short_message',
+    title: 'Community Park Volunteer Guidelines',
+    instructions: 'Read the email from the community organizer.',
+    content: {
+      context: 'Email to registered volunteers for the Green Valley Park clean-up day:',
+      text: 'Dear Volunteers,\n\nThank you for signing up for this Saturday’s woodland clean-up. We will provide heavy-duty gloves, rubbish bags, and litter pickers. However, as the ground remains muddy after recent storms, sturdy waterproof boots are essential. We will provide tea and coffee, but please bring your own packed lunch and a reusable water bottle. Registration begins promptly at 8:45 AM at the north visitor pavilion.',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'What must volunteers bring with them on Saturday?',
+        mode: 'single_choice',
+        options: [
+          'Appropriate footwear, their own food, and a water bottle.',
+          'Their own protective gloves and litter collection tools.',
+          'Hot drinks and snacks for the rest of the group.',
+          'An official signed registration form from the local council.',
+        ],
+        correctAnswer: 'Appropriate footwear, their own food, and a water bottle.',
+        distractors: [
+          'Their own protective gloves and litter collection tools.',
+          'Hot drinks and snacks for the rest of the group.',
+          'An official signed registration form from the local council.',
+        ],
+        hints: [
+          'Check what the organizers supply versus what volunteers are asked to bring.',
+          'Gloves and pickers are provided; boots, packed lunch, and water bottles must be brought by the volunteer.',
+        ],
+        explanation:
+          'The organizers supply gloves and bags, while volunteers are explicitly instructed to bring waterproof boots, their own lunch, and a water bottle.',
+        conceptTags: ['detail', 'email'],
+      },
+    ],
+    conceptTags: ['email', 'instructions', 'detail'],
+    estimatedDurationSec: 75,
+  },
+  {
+    id: 'read_b1_03_bicycle_cloze',
+    skill: 'Reading',
+    cefrLevel: 'B1',
+    difficulty: 4,
+    taskType: 'multiple_choice_cloze',
+    title: 'The Evolution of the Modern Bicycle',
+    instructions: 'Choose the correct word to complete each sentence in the passage.',
+    content: {
+      text: 'The bicycle is considered one of the most efficient machines ever invented. Over the past two centuries, its design has (1) [changed/remained/kept/stayed] remarkably, transforming from heavy wooden contraptions into sleek, lightweight vehicles. In modern European cities, governments are investing heavily (2) [in/on/with/at] dedicated cycling lanes to encourage green commuting. As a consequence, urban air quality has improved (3) [significantly/hardly/scarcely/quietly] in areas where car traffic has decreased.',
+    },
+    questions: [
+      {
+        id: 'gap1',
+        prompt: 'Gap (1): ...its design has _____ remarkably, transforming from heavy wooden contraptions...',
+        mode: 'single_choice',
+        options: ['changed', 'remained', 'kept', 'stayed'],
+        correctAnswer: 'changed',
+        distractors: ['remained', 'kept', 'stayed'],
+        hints: ['The sentence mentions transformation from wooden contraptions into sleek vehicles.'],
+        explanation:
+          '"Changed remarkably" fits the context of transformation. "Remained" or "stayed" would contradict the transformation.',
+        conceptTags: ['vocabulary_comprehension', 'context'],
+      },
+      {
+        id: 'gap2',
+        prompt: 'Gap (2): ...governments are investing heavily _____ dedicated cycling lanes...',
+        mode: 'single_choice',
+        options: ['in', 'on', 'with', 'at'],
+        correctAnswer: 'in',
+        distractors: ['on', 'with', 'at'],
+        hints: ['Which preposition follows the verb "invest"?'],
+        explanation: 'We say "invest in something".',
+        conceptTags: ['connector_logical_relation', 'preposition'],
+      },
+      {
+        id: 'gap3',
+        prompt: 'Gap (3): ...air quality has improved _____ in areas where car traffic has decreased.',
+        mode: 'single_choice',
+        options: ['significantly', 'hardly', 'scarcely', 'quietly'],
+        correctAnswer: 'significantly',
+        distractors: ['hardly', 'scarcely', 'quietly'],
+        hints: ['We need an adverb meaning "to a large or noticeable degree".'],
+        explanation:
+          '"Significantly" means noticeably and substantially. "Hardly" and "scarcely" are negative adverbs.',
+        conceptTags: ['vocabulary_comprehension', 'adverb'],
+      },
+    ],
+    conceptTags: ['cloze', 'prepositions', 'transport'],
+    estimatedDurationSec: 150,
+  },
+  {
+    id: 'read_b1_04_cooking_open_cloze',
+    skill: 'Reading',
+    cefrLevel: 'B1',
+    difficulty: 5,
+    taskType: 'open_cloze',
+    title: 'Learning to Cook at University',
+    instructions: 'Read the student blog and type ONE word in each gap.',
+    content: {
+      text: 'When I moved into student accommodation last September, I quickly realised that eating ready meals was (1) _____ expensive and unhealthy. I had never cooked before, so my flatmate taught (2) _____ how to prepare simple vegetable stir-fries and pasta sauces. Since then, I have become much more confident in the kitchen. In fact, cooking has turned into one of my favourite hobbies (3) _____ it helps me relax after long lectures.',
+    },
+    questions: [
+      {
+        id: 'gap1',
+        prompt: 'Gap (1): ...eating ready meals was _____ expensive and unhealthy.',
+        mode: 'text_input',
+        correctAnswer: 'both',
+        acceptableAnswers: ['both', 'too'],
+        hints: ['Which correlative conjunction pairs with "and" to emphasize two characteristics?'],
+        explanation: '"Both" pairs with "and" (both expensive and unhealthy). "Too" is also accepted.',
+        conceptTags: ['connector_logical_relation', 'grammar'],
+      },
+      {
+        id: 'gap2',
+        prompt: 'Gap (2): ...so my flatmate taught _____ how to prepare simple vegetable stir-fries...',
+        mode: 'text_input',
+        correctAnswer: 'me',
+        acceptableAnswers: ['me'],
+        hints: ['The author is speaking about themselves (object pronoun).'],
+        explanation: 'The object pronoun for the first person singular is "me".',
+        conceptTags: ['reference_pronoun', 'grammar'],
+      },
+      {
+        id: 'gap3',
+        prompt: 'Gap (3): ...one of my favourite hobbies _____ it helps me relax after long lectures.',
+        mode: 'text_input',
+        correctAnswer: 'because',
+        acceptableAnswers: ['because', 'as', 'since'],
+        hints: ['A causal conjunction explaining the reason why cooking is enjoyable.'],
+        explanation: '"Because", "as", or "since" introduce the reason.',
+        conceptTags: ['connector_logical_relation', 'connectors'],
+      },
+    ],
+    conceptTags: ['open_cloze', 'conjunctions', 'pronouns'],
+    estimatedDurationSec: 140,
+  },
+  {
+    id: 'read_b1_05_interview_completion',
+    skill: 'Reading',
+    cefrLevel: 'B1',
+    difficulty: 5,
+    taskType: 'sentence_completion',
+    title: 'Advice for Job Interviews',
+    instructions: 'Choose the most logical clause to complete each sentence.',
+    content: {
+      text: 'Preparing thoroughly is the cornerstone of any successful job interview. Candidates who research the company in advance tend to answer situational questions with greater authority.',
+    },
+    questions: [
+      {
+        id: 'sc1',
+        prompt: 'Before attending a formal interview, it is vital to research the organisation so that _____',
+        mode: 'sentence_completion',
+        options: [
+          'you can demonstrate genuine understanding of their mission and recent achievements.',
+          'they can tell you whether they have other applicants with identical qualifications.',
+          'you do not need to arrive on time at the company premises.',
+          'the hiring manager will immediately offer you the highest possible salary.',
+        ],
+        correctAnswer:
+          'you can demonstrate genuine understanding of their mission and recent achievements.',
+        distractors: [
+          'they can tell you whether they have other applicants with identical qualifications.',
+          'you do not need to arrive on time at the company premises.',
+          'the hiring manager will immediately offer you the highest possible salary.',
+        ],
+        hints: ['What does researching an employer allow an applicant to show?'],
+        explanation:
+          'Researching the company allows the candidate to show familiarity with its mission, values, and work.',
+        conceptTags: ['inference', 'sentence_completion'],
+      },
+      {
+        id: 'sc2',
+        prompt: 'When asked about a previous professional mistake, interviewers appreciate candidates who _____',
+        mode: 'sentence_completion',
+        options: [
+          'take responsibility and explain what constructive lessons they learned from the experience.',
+          'blame colleagues or supervisors in order to protect their personal reputation.',
+          'pretend they have never made any errors during their professional career.',
+          'refuse to answer the question on grounds of workplace confidentiality.',
+        ],
+        correctAnswer:
+          'take responsibility and explain what constructive lessons they learned from the experience.',
+        distractors: [
+          'blame colleagues or supervisors in order to protect their personal reputation.',
+          'pretend they have never made any errors during their professional career.',
+          'refuse to answer the question on grounds of workplace confidentiality.',
+        ],
+        hints: ['Employers value honesty, accountability, and the ability to learn from errors.'],
+        explanation:
+          'Accountability and self-reflection are widely regarded as positive professional traits in interviews.',
+        conceptTags: ['main_idea', 'sentence_completion'],
+      },
+    ],
+    conceptTags: ['sentence_completion', 'workplace', 'logic'],
+    estimatedDurationSec: 150,
+  },
+  {
+    id: 'read_b1_06_exchange_matching',
+    skill: 'Reading',
+    cefrLevel: 'B1',
+    difficulty: 5,
+    taskType: 'matching',
+    title: 'Language Exchange Programmes',
+    instructions: 'Match the four students to the summer language programme that best matches their goals.',
+    content: {
+      texts: [
+        {
+          id: 'prog_A',
+          title: 'Programme A: Alpine Environmental Camp (Switzerland)',
+          body: 'Combine French language immersion with alpine hiking and forestry conservation projects. Accommodation in shared mountain chalets. For students aged 16-20 with an interest in ecological sciences.',
+        },
+        {
+          id: 'prog_B',
+          title: 'Programme B: Dublin Business & Media Academy (Ireland)',
+          body: 'Two-week intensive English programme focusing on professional presentation skills, journalism, and podcast production. Includes guest lectures by media executives and campus dorm living.',
+        },
+        {
+          id: 'prog_C',
+          title: 'Programme C: Granada Flamenco & Culinary Arts (Spain)',
+          body: 'Spanish language morning classes followed by afternoon hands-on tapas cooking workshops and traditional music classes. Homestay with local host families in the historic Albaicín quarter.',
+        },
+        {
+          id: 'prog_D',
+          title: 'Programme D: Tokyo Tech & Robotics Immersion (Japan)',
+          body: 'Beginner Japanese classes paired with hands-on coding and robotics labs at a technological institute. Ideal for students pursuing science, technology, and engineering careers.',
+        },
+      ],
+    },
+    questions: [
+      {
+        id: 'm1',
+        prompt: 'Chloe is studying communication and wants an English course that will improve her public speaking and broadcasting skills.',
+        mode: 'single_choice',
+        options: ['Programme A', 'Programme B', 'Programme C', 'Programme D'],
+        correctAnswer: 'Programme B',
+        distractors: ['Programme A', 'Programme C', 'Programme D'],
+        hints: ['Look for public speaking, media, and English.'],
+        explanation:
+          'Programme B (Dublin Business & Media Academy) focuses on professional presentation skills and podcast production in English.',
+        conceptTags: ['matching', 'detail'],
+      },
+      {
+        id: 'm2',
+        prompt: 'Julian loves outdoor conservation and wants to practice his French while helping protected natural habitats.',
+        mode: 'single_choice',
+        options: ['Programme A', 'Programme B', 'Programme C', 'Programme D'],
+        correctAnswer: 'Programme A',
+        distractors: ['Programme B', 'Programme C', 'Programme D'],
+        hints: ['Look for French immersion and nature conservation.'],
+        explanation:
+          'Programme A (Alpine Environmental Camp) offers French immersion paired with hiking and forestry conservation.',
+        conceptTags: ['matching', 'detail'],
+      },
+      {
+        id: 'm3',
+        prompt: 'Elena wants to live with local residents to practice Spanish while learning authentic regional cooking techniques.',
+        mode: 'single_choice',
+        options: ['Programme A', 'Programme B', 'Programme C', 'Programme D'],
+        correctAnswer: 'Programme C',
+        distractors: ['Programme A', 'Programme B', 'Programme D'],
+        hints: ['Look for Spanish language, local homestays, and culinary arts.'],
+        explanation:
+          'Programme C (Granada) provides Spanish classes, homestays with local families, and tapas cooking workshops.',
+        conceptTags: ['matching', 'detail'],
+      },
+      {
+        id: 'm4',
+        prompt: 'Kenji is an aspiring computer engineer who wants to learn Japanese while exploring modern hardware and programming.',
+        mode: 'single_choice',
+        options: ['Programme A', 'Programme B', 'Programme C', 'Programme D'],
+        correctAnswer: 'Programme D',
+        distractors: ['Programme A', 'Programme B', 'Programme C'],
+        hints: ['Look for robotics, coding, and Japanese.'],
+        explanation:
+          'Programme D (Tokyo Tech) combines Japanese language with robotics and coding workshops.',
+        conceptTags: ['matching', 'detail'],
+      },
+    ],
+    conceptTags: ['matching', 'detail', 'scanning'],
+    estimatedDurationSec: 180,
+  },
+  {
+    id: 'read_b1_07_remote_work_insertion',
+    skill: 'Reading',
+    cefrLevel: 'B1',
+    difficulty: 5,
+    taskType: 'sentence_insertion',
+    title: 'The Shift to Remote Work',
+    instructions: 'Choose which sentence best fits into the marked gap [1] in the passage.',
+    content: {
+      text: 'Five years ago, Clara worked in a crowded open-plan office in central Manchester. Her daily commute took over eighty minutes each way by bus and train. [1] Today, she works from a dedicated home office in a peaceful coastal village. Although she occasionally misses casual conversations at the water cooler, she values the extra time she can now spend exercising and cooking fresh meals.',
+    },
+    questions: [
+      {
+        id: 'gap1',
+        prompt: 'Which sentence best fits into gap [1]?',
+        mode: 'single_choice',
+        options: [
+          'This daily journey left her feeling exhausted and left very little time for personal hobbies in the evenings.',
+          'Therefore, she decided to buy a sports car to make the journey twice as fast.',
+          'She had always preferred crowded train carriages because they helped her read literature.',
+          'Her employer insisted that every employee must commute at least three hours every day.',
+        ],
+        correctAnswer:
+          'This daily journey left her feeling exhausted and left very little time for personal hobbies in the evenings.',
+        distractors: [
+          'Therefore, she decided to buy a sports car to make the journey twice as fast.',
+          'She had always preferred crowded train carriages because they helped her read literature.',
+          'Her employer insisted that every employee must commute at least three hours every day.',
+        ],
+        hints: [
+          'The preceding sentence describes an eighty-minute commute each way.',
+          'The inserted sentence should describe the consequence of that long commute, contrasting with her pleasant life today.',
+        ],
+        explanation:
+          'The reference "This daily journey" links directly to the eighty-minute commute, and explains why she transitioned to remote work.',
+        conceptTags: ['text_structure', 'connector_logical_relation', 'reference_pronoun'],
+      },
+    ],
+    conceptTags: ['sentence_insertion', 'cohesion', 'text_structure'],
+    estimatedDurationSec: 120,
+  },
+  {
+    id: 'read_b1_08_coffee_ordering',
+    skill: 'Reading',
+    cefrLevel: 'B1',
+    difficulty: 5,
+    taskType: 'ordered_items',
+    title: 'How Coffee Beans Are Processed',
+    instructions: 'Place the steps of coffee processing in the correct chronological order from first (1) to last (4).',
+    content: {
+      context: 'The journey from coffee cherry to brewed cup involves four distinct stages.',
+    },
+    questions: [
+      {
+        id: 'order1',
+        prompt: 'Arrange the four stages in the correct chronological order:',
+        mode: 'ordered_items',
+        options: [
+          'Ripe coffee cherries are hand-picked from the trees on hillside plantations.',
+          'The outer fruit pulp is removed to extract the raw green seeds inside.',
+          'The green beans are roasted at high temperatures to unlock their rich flavour and aroma.',
+          'The roasted beans are ground into a fine powder and brewed with hot water.',
+        ],
+        correctAnswer: [
+          'Ripe coffee cherries are hand-picked from the trees on hillside plantations.',
+          'The outer fruit pulp is removed to extract the raw green seeds inside.',
+          'The green beans are roasted at high temperatures to unlock their rich flavour and aroma.',
+          'The roasted beans are ground into a fine powder and brewed with hot water.',
+        ],
+        hints: [
+          'First the fruit must be picked from the tree before anything else can happen.',
+          'Roasting happens to the green beans before they are ground and brewed.',
+        ],
+        explanation:
+          'Chronological sequence: Harvesting/picking -> Pulp extraction -> Roasting beans -> Grinding and brewing.',
+        conceptTags: ['text_structure', 'process'],
+      },
+    ],
+    conceptTags: ['ordered_items', 'process', 'text_structure'],
+    estimatedDurationSec: 150,
+  },
+  {
+    id: 'read_b1_09_beekeeping_passage',
+    skill: 'Reading',
+    cefrLevel: 'B1',
+    difficulty: 6,
+    taskType: 'long_passage',
+    title: 'Urban Beekeeping: Honey on City Rooftops',
+    instructions: 'Read the article about urban beekeeping and answer the comprehension questions.',
+    content: {
+      text: 'Over the past decade, a quiet revolution has taken place high above bustling city streets. From London and Paris to Melbourne and New York, hundreds of hotels, community centres, and office towers have installed beehives on their flat rooftops. Far from being hostile environments, urban centres often provide richer and more varied flora than rural monocultures, which are frequently treated with agricultural chemical sprays.\n\nCity bees forage across private gardens, balcony flowerpots, and expansive public parks. Research conducted by urban biologists indicates that rooftop bees produce honey that is not only abundant, but also completely safe and free from heavy metal contamination, because honeybees act as natural biological filters.\n\nHowever, experts caution that urban beekeeping must be managed responsibly. If too many domestic European honeybee colonies are placed in a single metropolitan area, they can outcompete indigenous solitary bees and wild bumblebees for limited pollen resources. Successful urban beekeeping therefore requires maintaining balanced bee populations and planting diverse nectar-rich plants.',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'Why do urban environments often suit bees better than some rural areas?',
+        mode: 'single_choice',
+        options: [
+          'Cities offer diverse flower varieties without the agricultural chemicals found on modern farmland.',
+          'Rooftops are much warmer during the winter months than open countryside.',
+          'Urban honeybees produce twice as much beeswax due to lower wind speeds.',
+          'Traffic fumes protect bees from predatory birds and parasites.',
+        ],
+        correctAnswer:
+          'Cities offer diverse flower varieties without the agricultural chemicals found on modern farmland.',
+        distractors: [
+          'Rooftops are much warmer during the winter months than open countryside.',
+          'Urban honeybees produce twice as much beeswax due to lower wind speeds.',
+          'Traffic fumes protect bees from predatory birds and parasites.',
+        ],
+        hints: ['Check the first paragraph comparing urban flora to rural monocultures.'],
+        explanation:
+          'Paragraph 1 explains that cities offer richer, more varied flora compared to rural monocultures treated with chemical sprays.',
+        conceptTags: ['detail', 'long_passage'],
+      },
+      {
+        id: 'q2',
+        prompt: 'What concern do scientists raise regarding the rapid growth of urban beekeeping?',
+        mode: 'single_choice',
+        options: [
+          'Large numbers of domestic honeybees can deprive wild and solitary bee species of pollen.',
+          'Rooftop honey frequently contains toxic pollutants from diesel vehicles.',
+          'Bees are unable to find sufficient water sources in tall concrete buildings.',
+          'Swarming bees represent a major physical danger to office workers.',
+        ],
+        correctAnswer:
+          'Large numbers of domestic honeybees can deprive wild and solitary bee species of pollen.',
+        distractors: [
+          'Rooftop honey frequently contains toxic pollutants from diesel vehicles.',
+          'Bees are unable to find sufficient water sources in tall concrete buildings.',
+          'Swarming bees represent a major physical danger to office workers.',
+        ],
+        hints: ['Read the final paragraph discussing competition with indigenous wild bees.'],
+        explanation:
+          'Paragraph 3 warns that domestic hives can "outcompete indigenous solitary bees and wild bumblebees for limited pollen resources".',
+        conceptTags: ['inference', 'long_passage'],
+      },
+      {
+        id: 'q3',
+        prompt: 'What is the main purpose of this article?',
+        mode: 'single_choice',
+        options: [
+          'To describe the benefits and potential ecological challenges of keeping bees in cities.',
+          'To persuade building owners to ban all beehives from city rooftops.',
+          'To advertise a new brand of commercial honey produced in capital cities.',
+          'To explain step-by-step how to construct a wooden beehive on a balcony.',
+        ],
+        correctAnswer:
+          'To describe the benefits and potential ecological challenges of keeping bees in cities.',
+        distractors: [
+          'To persuade building owners to ban all beehives from city rooftops.',
+          'To advertise a new brand of commercial honey produced in capital cities.',
+          'To explain step-by-step how to construct a wooden beehive on a balcony.',
+        ],
+        hints: ['Think about the article as a whole: it presents both positive points and necessary cautions.'],
+        explanation:
+          'The author objectively outlines the trend, explains its scientific viability, and highlights the need for ecological balance.',
+        conceptTags: ['main_idea', 'long_passage'],
+      },
+    ],
+    conceptTags: ['long_passage', 'environment', 'main_idea', 'detail', 'inference'],
+    estimatedDurationSec: 240,
+  },
+
+  // =========================================================================
+  // B2 LEVEL ACTIVITIES (9 activities, Difficulty 7 - 10)
+  // =========================================================================
+  {
+    id: 'read_b2_01_flexwork_memo',
+    skill: 'Reading',
+    cefrLevel: 'B2',
+    difficulty: 7,
+    taskType: 'short_message',
+    title: 'Internal Corporate Policy Memo',
+    instructions: 'Read the internal memorandum sent to department heads.',
+    content: {
+      context: 'Internal memorandum from Human Resources to all division managers:',
+      text: 'CORE HOURS & HYBRID PROTOCOL\n\nWhile our core operating hours (10:00 AM - 4:00 PM) remain mandatory for collaborative meetings and client-facing touchpoints, teams are empowered to exercise discretion regarding remote work for the remaining working hours. However, this flexibility is contingent on meeting delivery milestones and maintaining unbroken communication during core periods. Any proposed full-week remote arrangements must receive prior written endorsement from the divisional vice-president.',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'What is implied about working hours in this organisation?',
+        mode: 'single_choice',
+        options: [
+          'Employees have schedule autonomy outside core hours, provided performance standards and core availability are preserved.',
+          'Team members are expected to be physically in the office from 10:00 AM to 4:00 PM every working day.',
+          'Divisional managers are prohibited from granting any form of remote work without executive approval.',
+          'Employees may choose whatever working hours they prefer without notifying colleagues.',
+        ],
+        correctAnswer:
+          'Employees have schedule autonomy outside core hours, provided performance standards and core availability are preserved.',
+        distractors: [
+          'Team members are expected to be physically in the office from 10:00 AM to 4:00 PM every working day.',
+          'Divisional managers are prohibited from granting any form of remote work without executive approval.',
+          'Employees may choose whatever working hours they prefer without notifying colleagues.',
+        ],
+        hints: [
+          'The memo mentions discretion outside core hours "contingent on meeting delivery milestones and maintaining unbroken communication".',
+          'Only "full-week remote arrangements" require divisional VP endorsement, not normal hybrid flexibility.',
+        ],
+        explanation:
+          'The memo grants teams discretion outside core hours, provided milestones are met and communication is maintained during core hours.',
+        conceptTags: ['inference', 'short_message', 'workplace'],
+      },
+    ],
+    conceptTags: ['workplace', 'inference', 'formal_memo'],
+    estimatedDurationSec: 90,
+  },
+  {
+    id: 'read_b2_02_habits_cloze',
+    skill: 'Reading',
+    cefrLevel: 'B2',
+    difficulty: 7,
+    taskType: 'multiple_choice_cloze',
+    title: 'The Neuroscience of Habit Formation',
+    instructions: 'Select the option that best completes each gap in the text.',
+    content: {
+      text: 'Human behaviour is largely dictated by automatic routines known as habits. Neuroscientists have identified that habits operate in a three-part loop: a cue, a routine, and a reward. When a cue triggers a pattern, the brain (1) [spares/wastes/exhausts/spends] mental effort by letting the basal ganglia take over control. Rather than attempting to eradicate an unproductive habit entirely, cognitive psychologists advise that individuals should (2) [substitute/discard/prohibit/surrender] the undesirable routine with a healthier alternative while retaining the identical cue and reward. In doing so, long-term behavioural changes become significantly more (3) [sustainable/fleeting/fragile/provisional].',
+    },
+    questions: [
+      {
+        id: 'gap1',
+        prompt: 'Gap (1): ...the brain _____ mental effort by letting the basal ganglia take over control.',
+        mode: 'single_choice',
+        options: ['spares', 'wastes', 'exhausts', 'spends'],
+        correctAnswer: 'spares',
+        distractors: ['wastes', 'exhausts', 'spends'],
+        hints: ['Habits automate routines so the brain does not have to use extra effort.'],
+        explanation: '"Spares" (conserves/saves) mental effort. Automating tasks frees cognitive load.',
+        conceptTags: ['vocabulary_comprehension', 'collocation'],
+      },
+      {
+        id: 'gap2',
+        prompt: 'Gap (2): ...psychologists advise that individuals should _____ the undesirable routine with a healthier alternative...',
+        mode: 'single_choice',
+        options: ['substitute', 'discard', 'prohibit', 'surrender'],
+        correctAnswer: 'substitute',
+        distractors: ['discard', 'prohibit', 'surrender'],
+        hints: ['Notice the preposition "with" later in the clause: substitute X with Y.'],
+        explanation: 'We say "substitute X with Y" to replace an existing element with a new one.',
+        conceptTags: ['connector_logical_relation', 'preposition'],
+      },
+      {
+        id: 'gap3',
+        prompt: 'Gap (3): ...long-term behavioural changes become significantly more _____.',
+        mode: 'single_choice',
+        options: ['sustainable', 'fleeting', 'fragile', 'provisional'],
+        correctAnswer: 'sustainable',
+        distractors: ['fleeting', 'fragile', 'provisional'],
+        hints: ['The context talks about enduring long-term positive change.'],
+        explanation: '"Sustainable" means able to be maintained over the long term.',
+        conceptTags: ['vocabulary_comprehension', 'adjective'],
+      },
+    ],
+    conceptTags: ['cloze', 'neuroscience', 'vocabulary'],
+    estimatedDurationSec: 150,
+  },
+  {
+    id: 'read_b2_03_nomads_open_cloze',
+    skill: 'Reading',
+    cefrLevel: 'B2',
+    difficulty: 8,
+    taskType: 'open_cloze',
+    title: 'The Dilemma of the Digital Nomad',
+    instructions: 'Read the text and think of ONE word which best fits each gap.',
+    content: {
+      text: 'The proliferation of high-speed satellite internet and cloud software has enabled millions of knowledge workers to earn a living regardless (1) _____ their geographical location. While early coverage painted an idyllic picture of working from tropical beaches, seasoned nomads frequently point out the hidden burdens of perpetual mobility. Chief among these challenges (2) _____ chronic social isolation, navigating complex cross-border taxation, and the struggle to establish a predictable daily rhythm. Consequently, many remote professionals are now opting for "slow travel", spending several months in a single city rather (3) _____ relocating every few weeks.',
+    },
+    questions: [
+      {
+        id: 'gap1',
+        prompt: 'Gap (1): ...to earn a living regardless _____ their geographical location.',
+        mode: 'text_input',
+        correctAnswer: 'of',
+        acceptableAnswers: ['of'],
+        hints: ['Fixed prepositional phrase: "regardless _____".'],
+        explanation: 'The fixed expression is "regardless of".',
+        conceptTags: ['connector_logical_relation', 'preposition'],
+      },
+      {
+        id: 'gap2',
+        prompt: 'Gap (2): Chief among these challenges _____ chronic social isolation...',
+        mode: 'text_input',
+        correctAnswer: 'is',
+        acceptableAnswers: ['is', 'are'],
+        hints: ['Inverted sentence structure: "Chief among these challenges [verb] chronic social isolation...".'],
+        explanation:
+          'In inverted sentences, the singular subject "chronic social isolation" takes the singular copula "is" (though "are" is sometimes used colloquially).',
+        conceptTags: ['text_structure', 'grammar'],
+      },
+      {
+        id: 'gap3',
+        prompt: 'Gap (3): ...spending several months in a single city rather _____ relocating every few weeks.',
+        mode: 'text_input',
+        correctAnswer: 'than',
+        acceptableAnswers: ['than'],
+        hints: ['Comparative conjunction pairing with "rather".'],
+        explanation: 'The standard comparative phrase is "rather than".',
+        conceptTags: ['connector_logical_relation', 'connectors'],
+      },
+    ],
+    conceptTags: ['open_cloze', 'prepositions', 'connectors'],
+    estimatedDurationSec: 150,
+  },
+  {
+    id: 'read_b2_04_rewilding_insertion',
+    skill: 'Reading',
+    cefrLevel: 'B2',
+    difficulty: 8,
+    taskType: 'sentence_insertion',
+    title: 'Rewilding European Landscapes',
+    instructions: 'Determine which of the options best fits into the numbered gap [1] in the passage.',
+    content: {
+      text: 'For centuries, European conservation focused primarily on managing fragmented nature reserves through deliberate human intervention, such as selective culling and seasonal mowing. In recent decades, however, an alternative philosophy known as "rewilding" has gained significant scientific momentum. Proponents argue that ecosystems possess an innate capacity to self-regulate when apex predators and keystone herbivores are reintroduced. [1] By restoring apex predators such as the Eurasian lynx and grey wolf, ecological cascades are triggered that naturally curb overgrazing and stimulate forest regeneration.',
+    },
+    questions: [
+      {
+        id: 'gap1',
+        prompt: 'Which sentence best fits into position [1]?',
+        mode: 'single_choice',
+        options: [
+          'Rather than micromanaging flora and fauna, this approach steps back and allows natural biological processes to dictate the landscape.',
+          'Consequently, farmers in rural communities have universally welcomed wolves without any financial compensation.',
+          'Therefore, artificial fences must be erected around every national park to guarantee that trees grow in straight rows.',
+          'In contrast, urban zoos remain the only viable method for preserving endangered carnivores.',
+        ],
+        correctAnswer:
+          'Rather than micromanaging flora and fauna, this approach steps back and allows natural biological processes to dictate the landscape.',
+        distractors: [
+          'Consequently, farmers in rural communities have universally welcomed wolves without any financial compensation.',
+          'Therefore, artificial fences must be erected around every national park to guarantee that trees grow in straight rows.',
+          'In contrast, urban zoos remain the only viable method for preserving endangered carnivores.',
+        ],
+        hints: [
+          'The preceding sentence introduces rewilding and apex predators restoring self-regulation.',
+          'The following sentence gives concrete examples of apex predators (lynx, wolf) triggering ecological cascades.',
+        ],
+        explanation:
+          'This sentence directly explains what rewilding does ("steps back and allows natural biological processes to dictate the landscape") before the next sentence illustrates it with apex predators.',
+        conceptTags: ['text_structure', 'connector_logical_relation', 'cohesion'],
+      },
+    ],
+    conceptTags: ['sentence_insertion', 'ecology', 'coherence'],
+    estimatedDurationSec: 140,
+  },
+  {
+    id: 'read_b2_05_executive_matching',
+    skill: 'Reading',
+    cefrLevel: 'B2',
+    difficulty: 8,
+    taskType: 'matching',
+    title: 'Executive Masterclasses',
+    instructions: 'Match each business executive to the masterclass that addresses their strategic needs.',
+    content: {
+      texts: [
+        {
+          id: 'course_A',
+          title: 'Course A: Algorithmic Governance & AI Ethics',
+          body: 'Designed for senior legal and compliance officers navigating automated decision systems. Explores European regulatory compliance, bias mitigation in machine learning pipelines, and corporate liability frameworks.',
+        },
+        {
+          id: 'course_B',
+          title: 'Course B: Supply Chain Resilience & Geopolitical Risk',
+          body: 'Aimed at procurement directors facing international trade friction. Teaches scenario stress-testing, nearshoring feasibility analysis, and dual-sourcing architectures to insulate operations from regional crises.',
+        },
+        {
+          id: 'course_C',
+          title: 'Course C: Organisational Agility in M&A Integrations',
+          body: 'Focuses on cultural alignment and operational synthesis following corporate mergers. Covers retention of key talent, harmonising disparate IT architectures, and transparent crisis communications with institutional shareholders.',
+        },
+        {
+          id: 'course_D',
+          title: 'Course D: Sustainable Capital Markets & ESG Disclosure',
+          body: 'Tailored for Chief Financial Officers and investment managers preparing for rigorous carbon accounting audits. Explores green bond underwriting, scope 1-3 emissions reporting, and defending against greenwashing allegations.',
+        },
+      ],
+    },
+    questions: [
+      {
+        id: 'm1',
+        prompt: 'Marcus is overseeing the merger of two pharmaceutical giants and needs strategies to unite opposing corporate cultures and retain critical researchers.',
+        mode: 'single_choice',
+        options: ['Course A', 'Course B', 'Course C', 'Course D'],
+        correctAnswer: 'Course C',
+        distractors: ['Course A', 'Course B', 'Course D'],
+        hints: ['Marcus is dealing with post-merger integration and talent retention.'],
+        explanation:
+          'Course C directly addresses M&A integration, cultural alignment, and retaining key talent.',
+        conceptTags: ['matching', 'detail'],
+      },
+      {
+        id: 'm2',
+        prompt: 'Leila is a CFO preparing her enterprise for mandatory international environmental audits and wants to ensure their green investment reporting avoids regulatory penalties.',
+        mode: 'single_choice',
+        options: ['Course A', 'Course B', 'Course C', 'Course D'],
+        correctAnswer: 'Course D',
+        distractors: ['Course A', 'Course B', 'Course C'],
+        hints: ['Leila is a CFO focused on green bonds, emissions reporting, and greenwashing scrutiny.'],
+        explanation:
+          'Course D focuses on ESG disclosure, carbon accounting audits, and capital market sustainability.',
+        conceptTags: ['matching', 'detail'],
+      },
+      {
+        id: 'm3',
+        prompt: 'Sanjay leads international logistics for a consumer electronics brand and wants to safeguard component delivery routes against sudden trade sanctions and maritime bottlenecks.',
+        mode: 'single_choice',
+        options: ['Course A', 'Course B', 'Course C', 'Course D'],
+        correctAnswer: 'Course B',
+        distractors: ['Course A', 'Course C', 'Course D'],
+        hints: ['Sanjay manages logistics, trade risks, and supply chain bottlenecks.'],
+        explanation:
+          'Course B is dedicated to supply chain resilience, nearshoring, and geopolitical risk mitigation.',
+        conceptTags: ['matching', 'detail'],
+      },
+      {
+        id: 'm4',
+        prompt: 'Frederik is head of compliance at a financial fintech and must ensure their algorithmic credit scoring adheres to European anti-discrimination laws.',
+        mode: 'single_choice',
+        options: ['Course A', 'Course B', 'Course C', 'Course D'],
+        correctAnswer: 'Course A',
+        distractors: ['Course B', 'Course C', 'Course D'],
+        hints: ['Frederik handles algorithmic compliance, credit scoring bias, and AI liability.'],
+        explanation:
+          'Course A focuses specifically on algorithmic governance, bias mitigation, and AI regulatory compliance.',
+        conceptTags: ['matching', 'detail'],
+      },
+    ],
+    conceptTags: ['matching', 'business', 'scanning', 'detail'],
+    estimatedDurationSec: 200,
+  },
+  {
+    id: 'read_b2_06_academic_argument_ordering',
+    skill: 'Reading',
+    cefrLevel: 'B2',
+    difficulty: 8,
+    taskType: 'ordered_items',
+    title: 'Structure of an Academic Argument',
+    instructions: 'Reorder the following discourse elements to form a coherent rhetorical argument.',
+    content: {
+      context: 'An analytical paragraph evaluating the economic viability of universal basic income (UBI).',
+    },
+    questions: [
+      {
+        id: 'order1',
+        prompt: 'Order the four sentences from introductory claim (1) to ultimate synthesis (4):',
+        mode: 'ordered_items',
+        options: [
+          'Advocates of Universal Basic Income (UBI) contend that an unconditional cash transfer provides an essential security net in an era of automated labour.',
+          'Conversely, sceptics argue that unconditional payouts disincentivise labour force participation and impose an intolerable strain on public coffers.',
+          'Empirical trials conducted in Finland and Canada, however, suggest that recipients predominantly used funds to pursue retraining or caregiving rather than withdrawing from productive life.',
+          'On balance, these findings indicate that while fiscal hurdles remain formidable, the critique regarding widespread societal indolence is largely uncorroborated.',
+        ],
+        correctAnswer: [
+          'Advocates of Universal Basic Income (UBI) contend that an unconditional cash transfer provides an essential security net in an era of automated labour.',
+          'Conversely, sceptics argue that unconditional payouts disincentivise labour force participation and impose an intolerable strain on public coffers.',
+          'Empirical trials conducted in Finland and Canada, however, suggest that recipients predominantly used funds to pursue retraining or caregiving rather than withdrawing from productive life.',
+          'On balance, these findings indicate that while fiscal hurdles remain formidable, the critique regarding widespread societal indolence is largely uncorroborated.',
+        ],
+        hints: [
+          'Start with the proponent claim, followed by the counterargument ("Conversely"), then empirical evidence ("however"), concluding with "On balance".',
+        ],
+        explanation:
+          'Standard academic rhetoric follows Thesis -> Antithesis ("Conversely...") -> Empirical Test ("...however") -> Synthesis ("On balance, these findings indicate...").',
+        conceptTags: ['text_structure', 'connector_logical_relation', 'discourse'],
+      },
+    ],
+    conceptTags: ['ordered_items', 'academic', 'discourse'],
+    estimatedDurationSec: 180,
+  },
+  {
+    id: 'read_b2_07_biomimicry_passage',
+    skill: 'Reading',
+    cefrLevel: 'B2',
+    difficulty: 9,
+    taskType: 'long_passage',
+    title: 'Architectural Biomimicry: Nature as Blueprint',
+    instructions: 'Read the architectural essay and answer the questions testing detail, inference, and author perspective.',
+    content: {
+      text: 'For the greater part of the twentieth century, civil engineering operated under a philosophy of environmental subjugation: monumental steel and concrete edifices designed to seal inhabitants off from external climatic fluctuations through intensive, energy-hungry mechanical heating, ventilation, and air conditioning (HVAC) systems. In stark opposition to this brute-force paradigm, the burgeoning discipline of biomimicry posits that natural organisms, having undergone 3.8 billion years of iterative evolutionary refinement, offer the ultimate design blueprints for sustainable human habitats.\n\nPerhaps the most celebrated manifestation of this ethos is the Eastgate Centre in Harare, Zimbabwe, conceived by architect Mick Pearce. Confronted with the imperative to avoid costly air conditioning in an equatorial climate with dramatic diurnal temperature swings, Pearce studied the architecture of indigenous termite mounds (Macrotermes michaelseni). Despite external temperatures ranging from freezing at night to over 40°C at midday, termite mounds maintain an internal nursery temperature of precisely 31°C. Pearce replicated the mounds’ intricate chimney and flue network, creating a passive thermal siphon that draws cool night air into the building’s porous concrete slabs and releases warm air through rooftop vents as internal occupants and computers generate heat during the workday.\n\nThe empirical results are indisputable: the Eastgate Centre consumes less than ten percent of the energy utilized by conventional office blocks of comparable scale, saving millions in operating expenses while drastically reducing carbon emissions. Yet, despite such compelling precedents, mainstream architectural practice remains stubbornly anchored in glass-box orthodoxy. Critics often dismiss biomimetic structures as esoteric novelties requiring bespoke engineering that is difficult to scale. This conservatism is short-sighted. As climate mandates tighten and municipal energy grids falter under peak cooling loads, biomimicry will cease to be an avant-garde luxury; it will become a survival imperative.',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'According to the first paragraph, conventional 20th-century architecture was characterised by:',
+        mode: 'single_choice',
+        options: [
+          'Relying on energy-intensive mechanical systems to insulate interiors from natural climatic shifts.',
+          'Emulating natural biological structures through lightweight carbon composite materials.',
+          'Prioritising passive ventilation over artificial climate control.',
+          'Adapting structural forms to mimic ancient indigenous building traditions.',
+        ],
+        correctAnswer:
+          'Relying on energy-intensive mechanical systems to insulate interiors from natural climatic shifts.',
+        distractors: [
+          'Emulating natural biological structures through lightweight carbon composite materials.',
+          'Prioritising passive ventilation over artificial climate control.',
+          'Adapting structural forms to mimic ancient indigenous building traditions.',
+        ],
+        hints: ['Read the first sentence describing "brute-force paradigm" and HVAC systems.'],
+        explanation:
+          'Paragraph 1 explicitly notes that 20th-century buildings sealed inhabitants off via "intensive, energy-hungry mechanical heating, ventilation, and air conditioning (HVAC) systems".',
+        conceptTags: ['detail', 'long_passage'],
+      },
+      {
+        id: 'q2',
+        prompt: 'How does the passive ventilation system in the Eastgate Centre function?',
+        mode: 'single_choice',
+        options: [
+          'It captures cool night air within concrete slabs and expels rising warm air through roof flues during the day.',
+          'It pumps chilled subterranean groundwater through internal glass tubes along exterior facades.',
+          'It employs automated mechanical fans powered by rooftop solar photovoltaic arrays.',
+          'It mimics animal fur insulation by encasing exterior walls in porous synthetic foam.',
+        ],
+        correctAnswer:
+          'It captures cool night air within concrete slabs and expels rising warm air through roof flues during the day.',
+        distractors: [
+          'It pumps chilled subterranean groundwater through internal glass tubes along exterior facades.',
+          'It employs automated mechanical fans powered by rooftop solar photovoltaic arrays.',
+          'It mimics animal fur insulation by encasing exterior walls in porous synthetic foam.',
+        ],
+        hints: ['Check the explanation in paragraph 2 regarding the chimney and flue network.'],
+        explanation:
+          'Paragraph 2 describes how Pearce created a "passive thermal siphon that draws cool night air into the building’s porous concrete slabs and releases warm air through rooftop vents".',
+        conceptTags: ['detail', 'long_passage'],
+      },
+      {
+        id: 'q3',
+        prompt: 'What is the author’s attitude towards current mainstream architectural practice in the final paragraph?',
+        mode: 'single_choice',
+        options: [
+          'Critical of its stubborn conservatism and reluctance to adopt proven sustainable models.',
+          'Sympathetic to the immense financial risks faced by modern building developers.',
+          'Unconvinced that biomimetic principles can ever be applied beyond African climates.',
+          'Enthusiastic about the rapid global transition towards glass-box skyscrapers.',
+        ],
+        correctAnswer:
+          'Critical of its stubborn conservatism and reluctance to adopt proven sustainable models.',
+        distractors: [
+          'Sympathetic to the immense financial risks faced by modern building developers.',
+          'Unconvinced that biomimetic principles can ever be applied beyond African climates.',
+          'Enthusiastic about the rapid global transition towards glass-box skyscrapers.',
+        ],
+        hints: ['Notice words like "stubbornly anchored", "conservatism is short-sighted", and "survival imperative".'],
+        explanation:
+          'The author explicitly describes the profession as "stubbornly anchored in glass-box orthodoxy" and brands this scepticism as "short-sighted".',
+        conceptTags: ['inference', 'attitude', 'long_passage'],
+      },
+    ],
+    conceptTags: ['long_passage', 'architecture', 'attitude', 'inference', 'detail'],
+    estimatedDurationSec: 270,
+  },
+  {
+    id: 'read_b2_08_choice_paradox_passage',
+    skill: 'Reading',
+    cefrLevel: 'B2',
+    difficulty: 9,
+    taskType: 'long_passage',
+    title: 'The Tyranny of Infinite Choice',
+    instructions: 'Read the cultural critique and answer the comprehension and tone questions.',
+    content: {
+      text: 'In the embryonic days of digital streaming, cyber-optimists heralded on-demand media as the ultimate democratization of culture. No longer tethered to rigid broadcast schedules or the limited shelf space of video rental outlets, consumers were promised unprecedented autonomy. Yet decades into this algorithmic abundance, a curious psychological paralysis has gripped the modern subscriber: the exhausting ritual of spending forty-five minutes scrolling through algorithmic recommendation carousels only to surrender and re-watch a familiar sitcom from the late 1990s.\n\nThis phenomenon vividly exemplifies psychologist Barry Schwartz’s seminal concept of the "paradox of choice". Schwartz argued that while a modest degree of choice promotes subjective well-being, an exponential proliferation of options induces profound decision fatigue. When faced with thirty thousand feature films, the cognitive opportunity cost of selecting one narrative over twenty-nine thousand nine hundred and ninety-nine alternatives becomes psychologically burdensome. Any subsequent disappointment with the chosen film is experienced not merely as poor entertainment, but as personal regret over an inadequate optimization calculation.\n\nStreaming platforms exacerbate this existential friction by treating cultural works as undifferentiated "content assets" engineered primarily to maximise platform retention rather than aesthetic gratification. Autoplay previews, sensationalist thumbnails, and predictive algorithms subtly homogenize storytelling, flattening artistic idiosyncrasies to fit aggregate consumption metrics. The promise of infinite freedom has thus culminated in a paradox: limitless availability paired with profound cultural inertia.',
+    },
+    questions: [
+      {
+        id: 'q1',
+        prompt: 'In paragraph 1, the author contrasts early digital optimism with:',
+        mode: 'single_choice',
+        options: [
+          'The widespread paralysis and repetitive viewing habits experienced by contemporary subscribers.',
+          'The superior narrative quality of classic black-and-white cinematic productions.',
+          'The exorbitant subscription fees charged by monopoly entertainment conglomerates.',
+          'The complete absence of independent arthouse cinema on internet platforms.',
+        ],
+        correctAnswer:
+          'The widespread paralysis and repetitive viewing habits experienced by contemporary subscribers.',
+        distractors: [
+          'The superior narrative quality of classic black-and-white cinematic productions.',
+          'The exorbitant subscription fees charged by monopoly entertainment conglomerates.',
+          'The complete absence of independent arthouse cinema on internet platforms.',
+        ],
+        hints: ['Look at the contrast between "unprecedented autonomy" and the "exhausting ritual of spending forty-five minutes scrolling".'],
+        explanation:
+          'Paragraph 1 contrasts early promises of autonomy with the reality of users spending 45 minutes scrolling only to re-watch a 1990s sitcom.',
+        conceptTags: ['detail', 'long_passage'],
+      },
+      {
+        id: 'q2',
+        prompt: 'According to Schwartz’s theory discussed in paragraph 2, why does excessive choice cause unhappiness?',
+        mode: 'single_choice',
+        options: [
+          'Because the awareness of numerous unchosen alternatives amplifies feelings of personal regret.',
+          'Because consumers lack sufficient time to view previews for every available title.',
+          'Because subscription prices increase proportionally with the size of catalog offerings.',
+          'Because algorithms deliberately conceal the highest-rated films from paying members.',
+        ],
+        correctAnswer:
+          'Because the awareness of numerous unchosen alternatives amplifies feelings of personal regret.',
+        distractors: [
+          'Because consumers lack sufficient time to view previews for every available title.',
+          'Because subscription prices increase proportionally with the size of catalog offerings.',
+          'Because algorithms deliberately conceal the highest-rated films from paying members.',
+        ],
+        hints: ['Notice the explanation of "opportunity cost" and "inadequate optimization calculation".'],
+        explanation:
+          'Paragraph 2 explains that comparing the chosen option against thousands of foregone alternatives induces regret and decision fatigue.',
+        conceptTags: ['inference', 'long_passage'],
+      },
+      {
+        id: 'q3',
+        prompt: 'The author’s tone in the final paragraph can best be described as:',
+        mode: 'single_choice',
+        options: [
+          'Critical and apprehensive regarding the commercial commodification of art.',
+          'Enthusiastic and eager to explore future algorithmic recommendation features.',
+          'Indifferent and detached from modern popular entertainment trends.',
+          'Nostalgic exclusively for magnetic video cassette technology.',
+        ],
+        correctAnswer:
+          'Critical and apprehensive regarding the commercial commodification of art.',
+        distractors: [
+          'Enthusiastic and eager to explore future algorithmic recommendation features.',
+          'Indifferent and detached from modern popular entertainment trends.',
+          'Nostalgic exclusively for magnetic video cassette technology.',
+        ],
+        hints: ['Consider words like "undifferentiated content assets", "flattening artistic idiosyncrasies", and "cultural inertia".'],
+        explanation:
+          'The author sharply critiques how platforms treat films as assets engineered for retention and homogenize storytelling.',
+        conceptTags: ['attitude', 'inference', 'long_passage'],
+      },
+    ],
+    conceptTags: ['long_passage', 'culture', 'attitude', 'inference'],
+    estimatedDurationSec: 270,
+  },
+  {
+    id: 'read_b2_09_crosscultural_completion',
+    skill: 'Reading',
+    cefrLevel: 'B2',
+    difficulty: 8,
+    taskType: 'sentence_completion',
+    title: 'Managing Multicultural Teams',
+    instructions: 'Select the clause that completes each analytical statement logically and grammatically.',
+    content: {
+      text: 'Navigating international collaboration requires leaders to decipher unspoken communication conventions across high-context and low-context cultures.',
+    },
+    questions: [
+      {
+        id: 'sc1',
+        prompt: 'In low-context communication environments, effective managers ensure that expectations are stated with explicit precision because _____',
+        mode: 'sentence_completion',
+        options: [
+          'information is expected to be codified directly in the spoken or written message rather than inferred from situational nuances.',
+          'subordinates are culturally accustomed to guessing what their superiors imply through metaphorical allusions.',
+          'employees will refuse to cooperate unless all instructions are accompanied by legal contractual threats.',
+          'hierarchical status strictly forbids junior staff from asking any clarifying questions.',
+        ],
+        correctAnswer:
+          'information is expected to be codified directly in the spoken or written message rather than inferred from situational nuances.',
+        distractors: [
+          'subordinates are culturally accustomed to guessing what their superiors imply through metaphorical allusions.',
+          'employees will refuse to cooperate unless all instructions are accompanied by legal contractual threats.',
+          'hierarchical status strictly forbids junior staff from asking any clarifying questions.',
+        ],
+        hints: ['What defines "low-context" communication? Direct, literal encoding.'],
+        explanation:
+          'Low-context cultures rely on explicit, direct verbal communication rather than contextual or non-verbal cues.',
+        conceptTags: ['inference', 'sentence_completion'],
+      },
+      {
+        id: 'sc2',
+        prompt: 'Conversely, when delivering critical feedback in high-context business cultures, leaders should avoid blunt public confrontations so that _____',
+        mode: 'sentence_completion',
+        options: [
+          'the recipient can preserve dignity and "face" while absorbing the implicit evaluative message privately.',
+          'other team members will assume that the employee performed exceptionally well without any flaws.',
+          'the company does not need to conduct formal end-of-year performance reviews.',
+          'underperforming workers can be immediately dismissed without warning.',
+        ],
+        correctAnswer:
+          'the recipient can preserve dignity and "face" while absorbing the implicit evaluative message privately.',
+        distractors: [
+          'other team members will assume that the employee performed exceptionally well without any flaws.',
+          'the company does not need to conduct formal end-of-year performance reviews.',
+          'underperforming workers can be immediately dismissed without warning.',
+        ],
+        hints: ['High-context cultures place strong emphasis on social harmony, face-saving, and subtlety.'],
+        explanation:
+          'In high-context cultures, preserving dignity ("face") is essential; indirect, private communication allows correction without humiliation.',
+        conceptTags: ['inference', 'sentence_completion'],
+      },
+    ],
+    conceptTags: ['sentence_completion', 'business', 'communication'],
+    estimatedDurationSec: 160,
+  },
+];
